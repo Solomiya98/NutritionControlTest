@@ -3,37 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionControl.DataAccess", "NutritionControl.DataAccess\NutritionControl.DataAccess.csproj", "{374E602E-688D-4A44-9891-4A32B02619D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutritionControl.DataAccess", "NutritionControl.DataAccess\NutritionControl.DataAccess.csproj", "{374E602E-688D-4A44-9891-4A32B02619D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionControl.Domain", "NutritionControl.Domain\NutritionControl.Domain.csproj", "{565DDE2E-C5BD-47E0-9ABB-8048F711BAC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutritionControl.Domain", "NutritionControl.Domain\NutritionControl.Domain.csproj", "{565DDE2E-C5BD-47E0-9ABB-8048F711BAC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionControl.DTO", "NutritionControl.DTO\NutritionControl.DTO.csproj", "{E2A2081A-374C-4E3D-8FA1-8506C8A3DB9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutritionControl.DTO", "NutritionControl.DTO\NutritionControl.DTO.csproj", "{E2A2081A-374C-4E3D-8FA1-8506C8A3DB9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionControl.API", "NutritionControl.API\NutritionControl.API.csproj", "{D64FBB92-1654-48C6-AFBE-F0D247C194C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutritionControl.API", "NutritionControl.API\NutritionControl.API.csproj", "{D64FBB92-1654-48C6-AFBE-F0D247C194C1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{6CE13EE0-1ABD-4420-9C53-E1987821903B}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{13D8B7A9-55A6-4B0B-9710-FDE636822CCA}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "client", "NutritionControl.Client\client\", "{3B8C9F82-F71C-4564-8300-220E24F957EE}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_50897"
-		Debug.AspNetCompiler.PhysicalPath = "NutritionControl.Client\client\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50897\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_50897"
-		Release.AspNetCompiler.PhysicalPath = "NutritionControl.Client\client\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50897\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "50897"
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,10 +35,6 @@ Global
 		{D64FBB92-1654-48C6-AFBE-F0D247C194C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D64FBB92-1654-48C6-AFBE-F0D247C194C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D64FBB92-1654-48C6-AFBE-F0D247C194C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B8C9F82-F71C-4564-8300-220E24F957EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B8C9F82-F71C-4564-8300-220E24F957EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B8C9F82-F71C-4564-8300-220E24F957EE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B8C9F82-F71C-4564-8300-220E24F957EE}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,7 +44,6 @@ Global
 		{565DDE2E-C5BD-47E0-9ABB-8048F711BAC5} = {6CE13EE0-1ABD-4420-9C53-E1987821903B}
 		{E2A2081A-374C-4E3D-8FA1-8506C8A3DB9C} = {6CE13EE0-1ABD-4420-9C53-E1987821903B}
 		{D64FBB92-1654-48C6-AFBE-F0D247C194C1} = {6CE13EE0-1ABD-4420-9C53-E1987821903B}
-		{3B8C9F82-F71C-4564-8300-220E24F957EE} = {13D8B7A9-55A6-4B0B-9710-FDE636822CCA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {031950A0-0013-4105-8400-974809D2AB74}
