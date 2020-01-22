@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace NutritionControl.API.Controllers
 {
@@ -10,36 +11,29 @@ namespace NutritionControl.API.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly Microsoft.EntityFrameworkCore.DbContext _db;
+
+        public ValuesController(Microsoft.EntityFrameworkCore.DbContext db)
+        {
+            _db = db;
+        }
+
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public object GetTestProducts()
         {
-            return new string[] { "value1", "value2" };
+            //TEST VERSION
+            //ITS WRONG
+            return _db.Set<DataAccess.Entities.Product>().Include(x => x.Category).Select(x => new
+            {
+                x.Name,
+                x.CaloriesValue,
+                x.Fats,
+                x.Protein,
+                x.PhotoUrl,
+                Category = x.Category.Name
+            }).ToList();
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

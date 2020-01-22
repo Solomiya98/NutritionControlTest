@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using NutritionControl.API.Helpers;
 
 namespace NutritionControl.API
 {
@@ -14,7 +15,7 @@ namespace NutritionControl.API
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args).Build().SeedDatabase().Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

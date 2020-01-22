@@ -14,11 +14,11 @@ namespace NutritionControl.DataAccess.Configuration
     {
         private readonly List<ITypeInitializer> typeInitializers;
         private readonly UserManager<User> userManager;
-        private readonly RoleManager<IdentityRole> roleManager;
+        private readonly RoleManager<IdentityRole<int>> roleManager;
         private readonly DbContext context;
 
         public EntityInitializer(UserManager<User> _userManager,
-                                 RoleManager<IdentityRole> _roleManager,
+                                 RoleManager<IdentityRole<int>> _roleManager,
                                  DbContext _context)
         {
             typeInitializers = new List<ITypeInitializer>();
@@ -56,8 +56,10 @@ namespace NutritionControl.DataAccess.Configuration
 
         private async Task InitializeIdetity()
         {
-            await roleManager.CreateAsync(new IdentityRole { Name = "admin" });
+            //Create roles
+            await roleManager.CreateAsync(new IdentityRole<int> { Name = "admin" });
 
+            //Create users
             await userManager.CreateAsync(new User
             {
                 UserName = "vasyan@gmail.com",
