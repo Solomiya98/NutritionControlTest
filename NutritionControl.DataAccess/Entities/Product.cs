@@ -21,12 +21,9 @@ namespace NutritionControl.DataAccess.Entities
 
         /* Navigation Properties */
 
-        #region NavigationProps
-
         public int CategoryId { get; set; }
         public Category Category { get; set; }
         public ICollection<ProductReceipt> Receipts { get; set; }
 
-        #endregion
     }
 }

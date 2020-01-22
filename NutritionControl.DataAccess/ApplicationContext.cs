@@ -2,20 +2,23 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using NutritionControl.DataAccess.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NutritionControl.DataAccess
 {
     public class ApplicationContext : IdentityDbContext<User, IdentityRole<int>, int>
     {
+        #region DbSets
+
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Receipt> Receipts { get; set; }
         public DbSet<ProductReceipt> ProductReceipts { get; set; }
         public DbSet<UserAdditionalInfo> UserAdditionalInfos { get; set; }
         public DbSet<WeightInfo> WeightInfos { get; set; }
+        public DbSet<WaterValue> WaterValues { get; set; }
+        public DbSet<FoodIntake> FoodIntakes { get; set; }
+
+        #endregion
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
 

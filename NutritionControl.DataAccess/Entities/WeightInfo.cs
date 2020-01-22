@@ -10,6 +10,8 @@ namespace NutritionControl.DataAccess.Entities
         public decimal WeightValue { get; set; }
         public DateTime DateOfMeasurement { get; set; }
 
+        /* Navigation Properties */
+
         public int UserId { get; set; }
         public User User { get; set; }
     }

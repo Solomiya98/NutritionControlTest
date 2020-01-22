@@ -16,6 +16,7 @@ namespace NutritionControl.DataAccess.Entities
         public decimal CaloriesValue { get; set; }
         public string Description { get; set; }
 
+        /* Navigation Properties */
 
         public ICollection<ProductReceipt> Products { get; set; }
     }
