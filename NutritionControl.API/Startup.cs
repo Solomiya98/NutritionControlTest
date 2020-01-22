@@ -21,6 +21,8 @@ using NutritionControl.DataAccess.Configuration;
 using NutritionControl.DataAccess.Entities;
 using NutritionControl.DataAccess.Interfaces;
 using NutritionControl.DataAccess.Repository;
+using NutritionControl.Domain.Services.Implementation;
+using NutritionControl.Domain.Services.Interfaces;
 
 namespace NutritionControl.API
 {
@@ -46,6 +48,7 @@ namespace NutritionControl.API
 
             services.AddScoped<DbContext, ApplicationContext>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<ITestProductsService, TestProductService>();
 
             services.AddIdentity<User, IdentityRole<int>>(opts =>
             {

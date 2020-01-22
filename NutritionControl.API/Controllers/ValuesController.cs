@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,15 +21,17 @@ namespace NutritionControl.API.Controllers
         {
             //TEST VERSION
             //ITS WRONG
-            return _db.Set<DataAccess.Entities.Product>().Include(x => x.Category).Select(x => new
-            {
-                x.Name,
-                x.CaloriesValue,
-                x.Fats,
-                x.Protein,
-                x.PhotoUrl,
-                Category = x.Category.Name
-            }).ToList();
+            var data = _db.Set<DataAccess.Entities.Product>().Include(x=>x.Category).ToList();
+            return data;
+            //    .Include(x => x.Category).Select(x => new
+            //{
+            //    x.Name,
+            //    x.CaloriesValue,
+            //    x.Fats,
+            //    x.Protein,
+            //    x.PhotoUrl,
+            //    Category = x.Category.Name
+            //}).ToList();
         }
 
     }

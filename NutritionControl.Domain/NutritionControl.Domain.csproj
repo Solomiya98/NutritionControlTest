@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NutritionControl.DataAccess\NutritionControl.DataAccess.csproj" />
+    <ProjectReference Include="..\NutritionControl.DTO\NutritionControl.DTO.csproj" />
+  </ItemGroup>
+
 </Project>
