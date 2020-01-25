@@ -68,14 +68,14 @@ namespace NutritionControl.DataAccess.Configuration
 
             await userManager.CreateAsync(new User
             {
-                UserName = "petro@gmail.com",
-                Email = "petro@gmail.com"
+                UserName = "semen@gmail.com",
+                Email = "semen@gmail.com"
             }, "Qwe123!!");
 
             await userManager.CreateAsync(new User
             {
-                UserName = "shliapa@gmail.com",
-                Email = "shliapa@gmail.com",
+                UserName = "kolyan@gmail.com",
+                Email = "kolyan@gmail.com",
             }, "Qwe123!!");
 
             await userManager.CreateAsync(new User
