@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\NutritionControl.DataAccess\NutritionControl.DataAccess.csproj" />
     <ProjectReference Include="..\NutritionControl.DTO\NutritionControl.DTO.csproj" />
   </ItemGroup>
